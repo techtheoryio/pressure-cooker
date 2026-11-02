@@ -11,7 +11,7 @@ version=${1:?usage: build-app.sh <version>}
 app=.build/PressureCooker.app
 zip=.build/PressureCooker-$version.zip
 icon=Sources/PressureCooker/Resources/AppIcon.icns
-sparkle_key=""  # TODO: `.build/artifacts/sparkle/Sparkle/bin/generate_keys --account pressure-cooker` prints it; empty = no updates
+sparkle_key="KKpmxtp3dVwVLNnV8K9deJkHl8KF1E/lTscFN0WkbSE="  # `.build/artifacts/sparkle/Sparkle/bin/generate_keys --account pressure-cooker -p` prints it
 
 swift build -c release --arch arm64 --arch x86_64
 bin=$(swift build -c release --arch arm64 --arch x86_64 --show-bin-path)
